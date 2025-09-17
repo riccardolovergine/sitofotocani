@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogPhotoPro - Servizi Fotografici Professionali per Cani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://static.photos/dogs/1200x630/501');
+            background-size: cover;
+            background-position: center;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .btn-primary {
+            background-color: #D4A373;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #B5834F;
+            transform: translateY(-2px);
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-amber-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i data-feather="camera" class="text-amber-700 mr-2"></i>
+                    <span class="playfair text-xl font-bold text-amber-800">DogPhotoPro</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-amber-900 hover:text-amber-700">Home</a>
+                    <a href="#services" class="text-amber-900 hover:text-amber-700">Servizi</a>
+                    <a href="#gallery" class="text-amber-900 hover:text-amber-700">Galleria</a>
+                    <a href="#about" class="text-amber-900 hover:text-amber-700">Chi Sono</a>
+                    <a href="#faq" class="text-amber-900 hover:text-amber-700">FAQ</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image h-screen flex items-center justify-center text-white" data-aos="fade-in">
+        <div class="text-center px-4">
+            <h1 class="playfair text-4xl md:text-6xl font-bold mb-6">Fotografie indimenticabili per il tuo cane</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Catturiamo la personalità unica del tuo amico a quattro zampe in scatti professionali che dureranno per sempre</p>
+            <button class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg">Prenota ora</button>
+        </div>
+    </section>
+
+    <!-- Booking Calendar -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6" data-aos="fade-up">
+            <h2 class="playfair text-3xl text-center text-amber-900 mb-12">Prenota la tua sessione fotografica</h2>
+            <div class="max-w-4xl mx-auto bg-amber-100 rounded-xl p-6 shadow-lg">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2 p-4">
+                        <h3 class="text-xl font-semibold text-amber-800 mb-4">Disponibilità</h3>
+                        <div class="bg-white rounded-lg p-4 mb-4">
+                            <div class="flex justify-between items-center mb-4">
+                                <button class="text-amber-700"><i data-feather="chevron-left"></i></button>
+                                <span class="font-medium">Marzo 2023</span>
+                                <button class="text-amber-700"><i data-feather="chevron-right"></i></button>
+                            </div>
+                            <div class="grid grid-cols-7 gap-2 text-center">
+                                <div class="font-medium text-amber-700 py-2">Lun</div>
+                                <div class="font-medium text-amber-700 py-2">Mar</div>
+                                <div class="font-medium text-amber-700 py-2">Mer</div>
+                                <div class="font-medium text-amber-700 py-2">Gio</div>
+                                <div class="font-medium text-amber-700 py-2">Ven</div>
+                                <div class="font-medium text-amber-700 py-2">Sab</div>
+                                <div class="font-medium text-amber-700 py-2">Dom</div>
+                                
+                                <!-- Calendar days would be dynamically generated -->
+                                <div class="py-2 text-gray-400">27</div>
+                                <div class="py-2 text-gray-400">28</div>
+                                <div class="py-2">1</div>
+                                <div class="py-2">2</div>
+                                <div class="py-2 bg-amber-200 rounded-full">3</div>
+                                <div class="py-2 bg-amber-200 rounded-full">4</div>
+                                <div class="py-2 bg-amber-200 rounded-full">5</div>
+                                <!-- More days would follow -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-4">
+                        <h3 class="text-xl font-semibold text-amber-800 mb-4">Seleziona orario</h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button class="bg-white py-2 px-4 rounded-lg border border-amber-200 hover:bg-amber-100">09:00</button>
+                            <button class="bg-white py-2 px-4 rounded-lg border border-amber-200 hover:bg-amber-100">10:30</button>
+                            <button class="bg-white py-2 px-4 rounded-lg border border-amber-200 hover:bg-amber-100">12:00</button>
+                            <button class="bg-white py-2 px-4 rounded-lg border border-amber-200 hover:bg-amber-100">14:00</button>
+                            <button class="bg-white py-2 px-4 rounded-lg border border-amber-200 hover:bg-amber-100">15:30</button>
+                            <button class="bg-white py-2 px-4 rounded-lg border border-amber-200 hover:bg-amber-100">17:00</button>
+                        </div>
+                        <button class="btn-primary w-full mt-6 py-3 rounded-lg text-white font-medium">Conferma prenotazione</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <h2 class="playfair text-3xl text-center text-amber-900 mb-4" data-aos="fade-up">I nostri pacchetti fotografici</h2>
+            <p class="text-center text-amber-800 mb-12 max-w-2xl mx-auto" data-aos="fade-up">Scegli il pacchetto perfetto per immortalare il tuo amico a quattro zampe</p>
+            
+            <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up">
+                <!-- Package 1 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="h-48 bg-amber-200 flex items-center justify-center">
+                        <i data-feather="star" class="w-16 h-16 text-amber-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-bold text-amber-900 mb-2">Sessione Base</h3>
+                        <p class="text-amber-800 mb-4">30 minuti di sessione fotografica</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>10 foto digitali ad alta risoluzione</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>1 location a scelta</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>Consigli per la preparazione</span>
+                            </li>
+                        </ul>
+                        <div class="text-3xl font-bold text-amber-900 mb-4">€120</div>
+                        <button class="btn-primary w-full py-3 rounded-lg text-white font-medium">Prenota ora</button>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 transform scale-105">
+                    <div class="h-48 bg-amber-300 flex items-center justify-center">
+                        <i data-feather="award" class="w-16 h-16 text-amber-800"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="absolute top-0 right-0 bg-amber-700 text-white px-3 py-1 text-sm font-bold rounded-bl-lg">POPOLARE</div>
+                        <h3 class="playfair text-xl font-bold text-amber-900 mb-2">Sessione Premium</h3>
+                        <p class="text-amber-800 mb-4">60 minuti di sessione fotografica</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>25 foto digitali ad alta risoluzione</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>2 location a scelta</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>Consigli per la preparazione</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>1 stampa fine art 20x30cm</span>
+                            </li>
+                        </ul>
+                        <div class="text-3xl font-bold text-amber-900 mb-4">€220</div>
+                        <button class="btn-primary w-full py-3 rounded-lg text-white font-medium">Prenota ora</button>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="package-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="h-48 bg-amber-200 flex items-center justify-center">
+                        <i data-feather="heart" class="w-16 h-16 text-amber-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-bold text-amber-900 mb-2">Sessione Deluxe</h3>
+                        <p class="text-amber-800 mb-4">90 minuti di sessione fotografica</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>40+ foto digitali ad alta risoluzione</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>3 location a scelta</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>Consigli per la preparazione</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>3 stampe fine art 20x30cm</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 mr-2 text-amber-600"></i>
+                                <span>Album fotografico premium</span>
+                            </li>
+                        </ul>
+                        <div class="text-3xl font-bold text-amber-900 mb-4">€350</div>
+                        <button class="btn-primary w-full py-3 rounded-lg text-white font-medium">Prenota ora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="playfair text-3xl text-center text-amber-900 mb-4" data-aos="fade-up">La nostra galleria</h2>
+            <p class="text-center text-amber-800 mb-12 max-w-2xl mx-auto" data-aos="fade-up">Alcuni dei nostri splendidi Bovari del Bernese immortalati</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" data-aos="fade-up">
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="http://static.photos/dogs/640x360/401" alt="Golden Retriever che gioca con palla" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="http://static.photos/dogs/640x360/402" alt="Labrador che nuota" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="http://static.photos/dogs/640x360/403" alt="Cucciolo di Bulldog che dorme" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="http://static.photos/dogs/640x360/404" alt="Husky che abbaia" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="http://static.photos/dogs/640x360/405" alt="Poodle che salta" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="http://static.photos/dogs/640x360/406" alt="Boxer che corre" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <button class="border-2 border-amber-700 text-amber-700 font-bold py-2 px-6 rounded-full hover:bg-amber-700 hover:text-white transition duration-300">
+                    Vedi tutta la galleria
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-12" data-aos="fade-right">
+                    <img src="http://static.photos/people/640x360/101" alt="Fotografo con cane" class="rounded-xl shadow-xl w-full">
+                </div>
+                <div class="w-full md:w-1/2" data-aos="fade-left">
+                    <h2 class="playfair text-3xl text-amber-900 mb-6">Ciao, sono Luca</h2>
+                    <p class="text-amber-800 mb-4">Fotografo professionista specializzato in ritratti animali, con una passione per catturare l'essenza di ogni cane.</p>
+                    <p class="text-amber-800 mb-4">Con oltre 8 anni di esperienza nel campo della fotografia cinofila, ho sviluppato tecniche specifiche per catturare la personalità unica di ogni razza e meticcio.</p>
+                    <p class="text-amber-800 mb-6">Il mio approccio è paziente e rispettoso dei tempi del tuo cane, creando un ambiente rilassato dove la sua vera natura può emergere naturalmente.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-amber-700 hover:text-amber-900">
+                            <i data-feather="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-amber-700 hover:text-amber-900">
+                            <i data-feather="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-amber-700 hover:text-amber-900">
+                            <i data-feather="twitter" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="playfair text-3xl text-center text-amber-900 mb-4" data-aos="fade-up">Domande frequenti</h2>
+            <p class="text-center text-amber-800 mb-12 max-w-2xl mx-auto" data-aos="fade-up">Tutto quello che devi sapere prima della tua sessione fotografica</p>
+            
+            <div class="max-w-3xl mx-auto space-y-4" data-aos="fade-up">
+                <!-- FAQ Item 1 -->
+                <div class="border border-amber-200 rounded-lg overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-4 text-left bg-amber-50 hover:bg-amber-100">
+                        <span class="font-medium text-amber-900">Come devo preparare il mio cane per la sessione fotografica?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5 text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-4 text-amber-800 hidden">
+                        <p>Consigliamo di far fare al tuo cane una bella passeggiata prima della sessione per scaricare l'energia in eccesso. Porta con te i suoi snack preferiti e qualche giocattolo che ama particolarmente. Evita di dargli da mangiare troppo prima della sessione per mantenerlo attento e reattivo.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border border-amber-200 rounded-lg overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-4 text-left bg-amber-50 hover:bg-amber-100">
+                        <span class="font-medium text-amber-900">Cosa succede se il mio cane è particolarmente timido o agitato?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5 text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-4 text-amber-800 hidden">
+                        <p>Abbiamo molta esperienza con cani di ogni temperamento. Per i Bernesi più timidi, ci prendiamo tutto il tempo necessario per farli ambientare. Per quelli più vivaci, utilizziamo tecniche specifiche per catturare momenti di calma tra i giochi. La pazienza è la nostra migliore alleata!</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border border-amber-200 rounded-lg overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-4 text-left bg-amber-50 hover:bg-amber-100">
+                        <span class="font-medium text-amber-900">Posso essere presente durante la sessione fotografica?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5 text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-4 text-amber-800 hidden">
+                        <p>Assolutamente sì! Anzi, lo consigliamo vivamente. La tua presenza rassicura il tuo cane e spesso otteniamo le foto più spontanee quando interagisci con lui. Ti guideremo su come posizionarti per non interferire con le luci e gli scatti.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border border-amber-200 rounded-lg overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-4 text-left bg-amber-50 hover:bg-amber-100">
+                        <span class="font-medium text-amber-900">Quanto tempo ci vuole per ricevere le foto?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5 text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-4 text-amber-800 hidden">
+                        <p>Le foto vengono consegnate entro 7-10 giorni lavorativi dalla sessione. Riceverai un link via email per scaricare le immagini in alta risoluzione e, se incluso nel tuo pacchetto, le stampe verranno spedite entro 14 giorni lavorativi.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="border border-amber-200 rounded-lg overflow-hidden">
+                    <button class="flex justify-between items-center w-full p-4 text-left bg-amber-50 hover:bg-amber-100">
+                        <span class="font-medium text-amber-900">Quali metodi di pagamento accettate?</span>
+                        <i data-feather="chevron-down" class="w-5 h-5 text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-4 text-amber-800 hidden">
+                        <p>Accettiamo pagamenti con carta di credito (Visa, Mastercard, American Express), PayPal, bonifico bancario e contanti al momento della sessione. È richiesto un acconto del 30% al momento della prenotazione per confermare l'appuntamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <h2 class="playfair text-3xl text-center text-amber-900 mb-12" data-aos="fade-up">Cosa dicono i nostri clienti</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/101" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-amber-900">Martina R.</h4>
+                            <div class="flex text-amber-500">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-amber-800">"Le foto del mio Bernese sono venute magnificamente! Luca ha avuto una pazienza infinita con il mio cucciolone vivace e i risultati hanno superato ogni aspettativa."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/102" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-amber-900">Andrea B.</h4>
+                            <div class="flex text-amber-500">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-amber-800">"Esperienza fantastica! Il mio cane di solito è molto timido, ma Luca è riuscito a farlo sentire a suo agio e ha catturato la sua dolcezza in modo perfetto."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/103" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-amber-900">Elena T.</h4>
+                            <div class="flex text-amber-500">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-amber-800">"Non credevo fosse possibile avere foto così belle del mio cane! Il pacchetto premium è valso ogni centesimo. Le stampe sono di qualità eccezionale."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-amber-700 text-white">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <h2 class="playfair text-3xl mb-6">Pronto a immortalare il tuo amico peloso?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Prenota ora la tua sessione fotografica e crea ricordi che dureranno per sempre</p>
+            <button class="bg-white text-amber-800 font-bold py-3 px-8 rounded-full text-lg hover:bg-amber-100 transition duration-300">Prenota una sessione</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-100 py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i data-feather="camera" class="text-amber-300 mr-2"></i>
+                    <span class="playfair text-xl font-bold text-amber-300">DogPhotoPro</span>
+                </div>
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#home" class="hover:text-amber-300">Home</a>
+                    <a href="#services" class="hover:text-amber-300">Servizi</a>
+                    <a href="#gallery" class="hover:text-amber-300">Galleria</a>
+                    <a href="#about" class="hover:text-amber-300">Chi Sono</a>
+                    <a href="#faq" class="hover:text-amber-300">FAQ</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-amber-300">
+                        <i data-feather="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="hover:text-amber-300">
+                        <i data-feather="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="hover:text-amber-300">
+                        <i data-feather="twitter" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-6 pt-6 text-sm text-center">
+                <p>&copy; 2023 DogPhotoPro. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // FAQ Accordion
+        document.querySelectorAll('#faq button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle content
+                content.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('rotate-180');
+                } else {
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        // Mobile menu toggle would be added here
+    </script>
+</body>
+</html>
